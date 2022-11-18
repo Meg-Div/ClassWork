@@ -39,17 +39,3 @@ def fruit():
 
 fruit()
 print(list[0])
-
-
-num = int(input("Give me a positive integer \n"))
-
-def is_prime(num):
-    prime = True
-    if (num <= 1):
-        prime = False
-    for n in range(2,num):
-        if (num % n == 0):
-            prime = False
-            
-    
-    return prime
