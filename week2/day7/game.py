@@ -18,7 +18,7 @@ class Hero:
         self.baseball = ["stick of gum", "baseball bat", "baseball", "hotdog", "peanut"]
         self.beret = ["baguette", "square of cheese", "bottle of wine", "vespa", "mouse"]
         self.tehCloud = [self.stetson,self.fedora, self.tophat, self.baseball, self.beret]
-        self.eat = [10, 20, 30, 40, 50, 60]
+        self.eat = [10, 20, 30]
         self.winLose = ["increased", "decreased"]
         self.fight = ["the police do not seem impacted", "the police look bored", "the police look scared", "the police look terrified"]
         self.herosHats = []
@@ -40,21 +40,43 @@ Your choice: """)
     def useItem(self):
         random.shuffle(self.fight)
         return self.fight[0]
-    def eatItem(self):
+    def useDistraction(self, item):
+        response = newHero.useItem()
+        print(f"\nYou put your hat back on and use your {item} as a distraction,")
+        print(f"and {response}.")
+        if (response == "the police do not seem impacted"):
+            print("\nSo you lose some of your confidence and your health.")
+            newHero.health-=10
+        if (response == "the police look scared"):
+            print("\nIt boosts your confidence and your health enough to try again!")
+            newHero.health+=10
+        if (response == "the police look terrified"):
+            print("\nIt boosts your confidence and your health enough to try again!")
+            newHero.health+=20
+        if (response == "the police look bored"):
+            print("\nSo you lose some of your confidence and your health.")
+            newHero.health-=20
+        if (newHero.health < 0):
+            newHero.health == 0
+        print(f"Your health is now at: {newHero.health} / 100\n")
+    def eatItem(self, item):
         change = self.healthChange()
         random.shuffle(self.eat)
         if (change == "increased"):
             self.health = 100 if (self.health + self.eat[0] > 100) else (self.health + self.eat[0])
+            print(f"\nYou put your hat back on and eat the {item}.")
+            print(f"The {item} has given you strength!")
+            print(f"\nYour health is now at: {self.health} / 100\n")
         else:
             self.health = 0 if (self.health - self.eat[0] < 0) else (self.health - self.eat[0])
-        return self.health
+            print(f"\nYou put your hat back on and eat the {item}.")
+            print(f"But the {item} has poisoned you!")
+            print(f"\nYour health is now at: {self.health} / 100\n")
     def reachInBag(self):
         random.shuffle(self.cloudItems[0])
         item = self.cloudItems[0][0]
-        print(f"""Pulling off the {self.herosHats[0]} you reach inside and pull out a ...
-
-{item}!
-""")
+        print(f"Pulling off the {self.herosHats[0]} you reach inside and pull out a ...")
+        print(f"\n{item}!\n")
         del self.cloudItems[0][0]
         return item
     def chooseHat(self):
@@ -68,24 +90,23 @@ Your choice: """)
         return response
 
 newHero = Hero()
+
 print(f"""
 Welcome Hero!
 You are being chased by the police for a crime you didn't commit.
 You duck into a store to hide but you've been running so long your health is at: {newHero.health} / 100
 """)
 time.sleep(6)
-print("""
-The shopkeep sees you attempting to hide and offers to sell you a magic hat.
-You are exhuasted and doubtfully stare at him as he puts a hat on,
-only to take it off and pull something out of it.
+print("""The shopkeep sees you attempting to hide and offers to sell you a magic hat.
+You are exhuasted and stare at him as he puts a hat on,
+only to take it off to pull something out of it.
 """)
 time.sleep(7)
-print("""
+print("""Your eyes widen.
 "How much?" You ask and he quotes a resonable amount so you buy two.
-He tells you you can only wear one at a time.
-""")
+He tells you that you can only wear one hat at a time...""")
 time.sleep(6)
-print("Choose your first hat Hero!")
+print("\nChoose your first hat Hero!")
 firstHat = newHero.hats[int(newHero.chooseHat())-1]
 print(f"\nYou chose: {firstHat}\n")
 index = newHero.hats.index(firstHat)
@@ -105,7 +126,9 @@ Which hat do you put on first?
 1) {firstHat}
 2) {secondHat}
 """)
+
 response = input("Your choice: ")
+
 if (response == "1"):
     newHero.carryHats(firstHat)
     newHero.carryHats(secondHat)
@@ -117,7 +140,7 @@ else:
     newHero.cloudHats(secondHatCloud)
     newHero.cloudHats(firstHatCloud)
 
-print(f"\nYou put on the {newHero.herosHats[0]} and pocket the {newHero.herosHats[1]}.")
+print(f"\nYou put on the {newHero.herosHats[0]} and pocket the {newHero.herosHats[1]}.\n")
 
 running = True
 
@@ -126,45 +149,31 @@ while (running):
         del newHero.cloudItems[0]
         del newHero.herosHats[0]
         print("Your current hat disappears!")
-        print(f"You put on your second hat and now you wear your {newHero.herosHats[0]}!\n")
+        print(f"You put on your second hat and now wear your {newHero.herosHats[0]}!\n")
+
     item = newHero.reachInBag()
-    number = newHero.chooseAction()
-    response = newHero.useItem()
-    if (number == "1"):
-        change = newHero.eatItem()
-        print(f"\nYou put your hat back on and eat the {item}.\nYour health is now at: {newHero.health} / 100")
- 
+    choice = newHero.chooseAction()
+
+    if (choice == "1"):
+        newHero.eatItem(item) 
     else:
-        print(f"\nYou put your hat back and on use your {item} as a distraction,")
-        print(f"and {response}.")
-        if (response == "the police do not seem impacted"):
-            print("\nSo you lose some of your confidence and your health.")
-            newHero.health-=10
-        if (response == "the police look scared"):
-            print("\nIt boosts your confidence and your health enough to try again!")
-            newHero.health+=10
-        if (response == "the police look terrified"):
-            print("\nIt boosts your confidence and your health enough to try again!")
-            newHero.health+=20
-        if (response == "the police look bored"):
-            print("\nSo you lose some of your confidence and your health.")
-            newHero.health-=20
-        if (newHero.health < 0):
-            newHero.health == 0
-        
-        print(f"Your health is now at: {newHero.health} / 100\n")
+        newHero.useDistraction(item)
 
     if (newHero.health == 100):
-        print("""\nYou're finally strong enough to get away!
-You race out the side door and the cops are left in your dust!
-""")
+        print("You're now finally strong enough to get away!")
+        print("You race out the side door and the cops are left in your dust!\n")
         running = False
-    if (newHero.health == 0):
-        print("""so you're no longer strong enough to get away!
 
-The police tackle you and haul you away to jail!
-Hope you have a good attorney!
-""")
+    if (newHero.health == 0):
+        print("You're no longer strong enough to get away!")
+        print("The police tackle you and haul you away to jail.")
+        print("Hope you have a good attorney!\n")
+        running = False
+
+    if (len(newHero.cloudItems) == 0):
+        print("Your current hat disappears and you have no more hats!")
+        print("The police tackle you and haul you away to jail.")
+        print("Hope you have a good attorney!\n")
         running = False
 
 
