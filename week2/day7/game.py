@@ -7,6 +7,7 @@
 
 #Felix the cat, hat chosen can produce different tools
 import random
+import time
 
 class Hero:
     def __init__(self):
@@ -63,30 +64,36 @@ Your choice: """)
         3) Top hat
         4) Baseball
         5) Beret
-        """)
+        Your choice: """)
         return response
 
 newHero = Hero()
 print(f"""
-You are being chased by the police for a crime you didn't commit and you duck into a store to hide.
-You've been running so long your health is at:
-{newHero.health} / 100
+Welcome Hero!
+You are being chased by the police for a crime you didn't commit.
+You duck into a store to hide but you've been running so long your health is at: {newHero.health} / 100
+""")
+time.sleep(6)
+print("""
 The shopkeep sees you attempting to hide and offers to sell you a magic hat.
 You are exhuasted and doubtfully stare at him as he puts a hat on,
 only to take it off and pull something out of it.
-"How much?" You ask and he quotes a resonable amount so you buy two.
-He tells you you can only wear one at a time,
-and the first will disappear once you put the second hat on. 
 """)
+time.sleep(7)
+print("""
+"How much?" You ask and he quotes a resonable amount so you buy two.
+He tells you you can only wear one at a time.
+""")
+time.sleep(6)
 print("Choose your first hat Hero!")
 firstHat = newHero.hats[int(newHero.chooseHat())-1]
-print("You chose:", firstHat)
+print(f"\nYou chose: {firstHat}\n")
 index = newHero.hats.index(firstHat)
 firstHatCloud = newHero.tehCloud[index]
 
 print("Choose your second hat Hero!")
 secondHat = newHero.hats[int(newHero.chooseHat())-1]
-print("You chose:", secondHat)
+print(f"\nYou chose: {secondHat}")
 index = newHero.hats.index(secondHat)
 secondHatCloud = newHero.tehCloud[index]
 
@@ -153,7 +160,7 @@ You race out the side door and the cops are left in your dust!
 """)
         running = False
     if (newHero.health == 0):
-        print("""and you're no longer strong enough to get away!
+        print("""so you're no longer strong enough to get away!
 
 The police tackle you and haul you away to jail!
 Hope you have a good attorney!
