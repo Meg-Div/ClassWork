@@ -1,3 +1,6 @@
+#Article writeup up my process:
+#https://medium.com/@meg_d/thats-a-hat-97a93c3ea0a8
+
 import random
 import time
 
@@ -164,4 +167,3 @@ while (running):
         print("The police tackle you and haul you away to jail.")
         print("Hope you have a good attorney!\n")
         running = False
-
