@@ -1,26 +1,15 @@
-#good guy
-#bad guy
-
-#loop until victor is chosen
-
-#Choose your hero
-
-#Felix the cat, hat chosen can produce different tools
 import random
 import time
 
 class Hero:
     def __init__(self):
         self.hats = ["Stetson", "Fedora", "Top hat", "Baseball hat", "Beret"]
-        self.stetson = ["rope", "horse", "hay bale", "spur", "cow"]
-        self.fedora = ["cigar", "lighter", "bottle of bourbon", "glass of whiskey", "piano"]
-        self.tophat = ["rabbit", "white glove", "pocket watch", "cane", "necklace"]
-        self.baseball = ["stick of gum", "baseball bat", "baseball", "hotdog", "peanut"]
-        self.beret = ["baguette", "square of cheese", "bottle of wine", "vespa", "mouse"]
-        self.tehCloud = [self.stetson,self.fedora, self.tophat, self.baseball, self.beret]
+        self.tehCloud = [["rope", "horse", "hay bale", "spur", "cow"],["cigar", "lighter", "bottle of bourbon", "glass of whiskey", "piano"], 
+        ["rabbit", "white glove", "pocket watch", "cane", "necklace"], ["stick of gum", "baseball bat", "baseball", "hotdog", "peanut"], 
+        ["baguette", "square of cheese", "bottle of wine", "vespa", "mouse"]]
         self.eat = [10, 20, 30]
         self.winLose = ["increased", "decreased"]
-        self.fight = ["the police do not seem impacted", "the police look bored", "the police look scared", "the police look terrified"]
+        self.police = ["the police do not seem impacted", "the police look bored", "the police look scared", "the police look terrified"]
         self.herosHats = []
         self.cloudItems = []
         self.health = 40
@@ -30,18 +19,13 @@ class Hero:
 1) Eat it to attempt to increase your health
 2) Use it to attempt to get away from the police
 Your choice: """)
-    def healthChange(self):
-        random.shuffle(self.winLose)
-        return self.winLose[0]
     def cloudHats(self, hat):
         self.cloudItems.append(hat)
     def carryHats(self, hat):
         self.herosHats.append(hat)
-    def useItem(self):
-        random.shuffle(self.fight)
-        return self.fight[0]
     def useDistraction(self, item):
-        response = newHero.useItem()
+        random.shuffle(self.police)
+        response = self.police[0]
         print(f"\nYou put your hat back on and use your {item} as a distraction,")
         print(f"and {response}.")
         if (response == "the police do not seem impacted"):
@@ -60,8 +44,9 @@ Your choice: """)
             newHero.health == 0
         print(f"Your health is now at: {newHero.health} / 100\n")
     def eatItem(self, item):
-        change = self.healthChange()
+        random.shuffle(self.winLose)
         random.shuffle(self.eat)
+        change = self.winLose[0]
         if (change == "increased"):
             self.health = 100 if (self.health + self.eat[0] > 100) else (self.health + self.eat[0])
             print(f"\nYou put your hat back on and eat the {item}.")
@@ -145,7 +130,17 @@ print(f"\nYou put on the {newHero.herosHats[0]} and pocket the {newHero.herosHat
 running = True
 
 while (running):
+
+    if (len(newHero.cloudItems[0]) == 0 and len(newHero.cloudItems[1]) == 0):
+        print("Oh no!")
+        print("Your current hat disappears and you have no more hats!")
+        print("You try to run but the police tackle you and haul you away to jail.")
+        print("Hope you have a good attorney!\n")
+        break
+
     if (len(newHero.cloudItems[0]) == 0):
+        newHero.cloudItems.append(newHero.cloudItems[0])
+        newHero.herosHats.append(newHero.herosHats[0])
         del newHero.cloudItems[0]
         del newHero.herosHats[0]
         print("Your current hat disappears!")
@@ -169,11 +164,4 @@ while (running):
         print("The police tackle you and haul you away to jail.")
         print("Hope you have a good attorney!\n")
         running = False
-
-    if (len(newHero.cloudItems) == 0):
-        print("Your current hat disappears and you have no more hats!")
-        print("The police tackle you and haul you away to jail.")
-        print("Hope you have a good attorney!\n")
-        running = False
-
 
