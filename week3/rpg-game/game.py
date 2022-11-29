@@ -114,7 +114,22 @@ Your choice: """)
 
 newHero = Hero()
 
-
+print("\nWelcome Hero!")
+time.sleep(3)
+print(f"""
+You are being chased by the police for a crime you didn't commit.
+You duck into a store to hide but you've been running so long your health is at: {newHero.health} / 100
+""")
+time.sleep(6)
+print("""The shopkeep sees you attempting to hide and offers to sell you a magic hat.
+You are exhuasted and stare at him as he puts a hat on,
+only to take it off to pull something out of it.
+""")
+time.sleep(7)
+print("""Your eyes widen.
+"How much?" You ask and he quotes a resonable amount so you buy two.
+He tells you that you can only wear one hat at a time...""")
+time.sleep(6)
 
 print("\nChoose your first hat Hero!")
 firstHat = newHero.hats[int(newHero.chooseHat())-1]
