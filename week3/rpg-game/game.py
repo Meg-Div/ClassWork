@@ -1,4 +1,4 @@
-#Article writeup up my process:
+#Article writeup up:
 #https://medium.com/@meg_d/thats-a-hat-97a93c3ea0a8
 
 import random
@@ -15,7 +15,7 @@ class Hero:
         self.police = ["the police do not seem impacted", "the police look bored", "the police look scared", "the police look terrified"]
         self.herosHats = []
         self.cloudItems = []
-        self.health = 20
+        self.health = 40
         self.actions = ["eat it to attempt to increase your health", "use it to attempt to get away from the police"]
     def chooseAction(self):
         time.sleep(3)
@@ -31,16 +31,15 @@ Your choice: """)
             action = self.chooseAction()
         return action
     def hatOne(self):
-        response = input(f"""Which hat do you put on first?
-
+        response = input(f"""Which hat do you put on first?\n
 1) {firstHat}
 2) {secondHat}
 Your choice: """)
         if (response.isnumeric() is False):
-            print("Please choose 1 or 2.\n")
+            print("\nPlease choose 1 or 2.\n")
             response = self.hatOne()
         if (response.isnumeric() is True and int(response) < 1 or int(response) > 2):
-            print("Please choose 1 or 2.\n")
+            print("\nPlease choose 1 or 2.\n")
             response = self.hatOne()
         return response
     def cloudHats(self, hat):
@@ -111,14 +110,14 @@ Your choice: """)
             response = self.chooseHat()
         return response
 
-
 newHero = Hero()
 
 print("\nWelcome Hero!")
 time.sleep(3)
 print(f"""
 You are being chased by the police for a crime you didn't commit.
-You duck into a store to hide but you've been running so long your health is at: {newHero.health} / 100
+You duck into a store to hide but you've been running so long 
+your health is at: {newHero.health} / 100
 """)
 time.sleep(6)
 print("""The shopkeep sees you attempting to hide and offers to sell you a magic hat.
@@ -168,6 +167,7 @@ while (running):
         print("------------------------------------------------------------------------")
         print("Oh no!")
         print("Your current hat disappears and you have no more hats!")
+        time.sleep(3)
         print("You try to run but the police tackle you and haul you away to jail.")
         print("Hope you have a good attorney!\n")
         break
@@ -177,6 +177,7 @@ while (running):
         newHero.herosHats.append(newHero.herosHats[0])
         del newHero.cloudItems[0]
         del newHero.herosHats[0]
+        time.sleep(3)
         print("Your current hat disappears!")
         print(f"You put on your second hat and now wear your {newHero.herosHats[0]}!\n")
 
