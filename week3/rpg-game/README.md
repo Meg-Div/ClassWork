@@ -16,4 +16,9 @@ Project Expectations:
 Project Language: 
 - Python
 
-Blog Post: https://medium.com/@meg_d/thats-a-hat-97a93c3ea0a8
+Project Replit:
+- https://replit.com/@Meg-Div/Thats-A-Hat#main.py
+
+Project Blogs:
+- https://medium.com/@meg_d/thats-a-hat-97a93c3ea0a8
+- https://dev.to/megdiv/thats-a-hat-57gn
