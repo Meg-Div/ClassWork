@@ -110,20 +110,16 @@
 }
 
 .gamesAbout {
-    width: 100px;
+    width: 200px;
     height: 100px;
-    padding: 100px;
+    padding: 150px;
     float: right;
-    font-size: xx-large;
-    border-radius: 50%;
-    text-align: center;
-    font-family: "Fascinate Inline";
+    border-radius: 900px;
     animation: bounce 0.7s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.5, 0.02, 1, 1);
     animation-iteration-count: infinite;
 }
-
 
 .gamesImage {
     position: absolute;
