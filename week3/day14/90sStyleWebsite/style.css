@@ -7,6 +7,7 @@
     text-align: center;
     font-family: "Titillium Web", cursive;
     font-size: x-large;
+    font-weight: bold;
   }
 
 /*Background*/
@@ -21,7 +22,6 @@
     background-size: 500px;
 }
 
-
 .backgroundPolaroid {
     background-image: url("https://images.unsplash.com/photo-1605722625766-a4c989c747a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
     background-size: 1350px;
@@ -32,12 +32,24 @@
     background-size: 1000px;
 }
 
+.backgroundCandy  {
+    background-image: url("https://images.unsplash.com/photo-1587642303371-96accbf47448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+    background-size: 1500px;
+}
+
+.backgroundToys {
+    background-image: url("https://i.etsystatic.com/7459605/r/il/25761a/442388702/il_680x540.442388702_2uca.jpg");
+    background-size: 200px;
+}
 
 /*Links*/
 
 .linkViewMaster, a.linkViewMaster:link, a.linkViewMaster:visited {
     text-decoration: none;
     color: black;
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
 }
 
 .linkViewMaster, a.linkViewMaster:hover {
@@ -48,6 +60,9 @@
 .linkPolariod, a.linkPolariod:link, a.linkPolariod:visited {
     text-decoration: none;
     color: black;
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
 }
 
 .linkPolariod, a.linkPolariod:hover {
@@ -65,11 +80,40 @@
 .linkGames, a.linkGames:link, a.linkGames:visited {
     text-decoration: none;
     color: black;
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
 }
 
 .linkGames, a.linkGames:hover {
     text-decoration: none;
     color: yellow;
+}
+
+.linkCandy, a.linkCandy:link, a.linkCandy:visited {
+    text-decoration: none;
+    color: black;
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
+}
+
+.linkCandy, a.linkCandy:hover {
+    text-decoration: none;
+    color: #FF10F0;
+}
+
+.linkToys, a.linkToys:link, a.linkToys:visited {
+    text-decoration: none;
+    color: black;
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
+}
+
+.linkToys, a.linkToys:hover {
+    text-decoration: none;
+    color: aquamarine;
 }
 
 /*About*/
@@ -87,16 +131,15 @@
 }
 
 .viewMasterAbout {
-    width: 500px;
+    width: 400px;
     padding: 0px;
-    margin: 300px;
+    margin: 150px;
     font-family: "Alfa Slab One";
     text-align: center;
     float: center;
-    color: #f0491f;
+    color: black;
     font-size: xx-large;
-    animation: mymove 5s infinite;
-}
+    animation: animationFrames 5s infinite;}
 
 .polarAbout {
     -webkit-animation: spinX 7s infinite;
@@ -106,15 +149,14 @@
     margin: 150px;
     font-size: larger;
     font-family: "Alfa Slab One";
-
 }
 
 .gamesAbout {
     width: 200px;
     height: 100px;
-    padding: 150px;
+    padding: 250px;
     float: right;
-    border-radius: 900px;
+    border-radius: 100%;
     animation: bounce 0.7s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.5, 0.02, 1, 1);
@@ -134,18 +176,113 @@
     animation:spin 4s linear infinite;
 }
 
-.flash-container {
-    animation: grow 5s 2s linear forwards;
-    width: 20px;
-    height: 20px;
-    z-index: 4;
-    margin: 0 auto;
-    box-shadow: 0 0 30vw 40vw rgba(10,124,10,1);
+.candyAbout {
+    width: 310px;
+    padding: 00px;
+    margin: 20px;
+    animation: bounce 0.7s;
+    margin: -1000px 10 0 300px;
+    color: rgb(230, 46, 165);
+    background-color: black;   
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    font-size: x-large;
+  }
+
+.candyImageAll {
+    width: 500px;
+    height: 350px;
+    padding: 00px;
+    border-radius: 50%;
+    margin: -1000px 10 0 300px;
+    animation: bounce 0.7s;
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+  
+  .candyImageBubbleTape {
+    width: 350px;
+    height: 350px;
+    padding: 00px;
+    border-radius: 50%;
+    margin: 10px 0 0 30px;
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+
+  .littleAbout {
+    height: 250px;
+    width: 800px;
+    margin: 100px; 
+    padding: 0px;
+    border-radius: 50%;
+    text-align: center;
+    color:rgb(32, 198, 184) ;  
+    background-color: black;
+    font-size: xx-large;
+    animation: fadeIn 5s infinite;
+  }
+
+  .littleImage {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    padding: 100px;
+    top: 50%;
+    left: 50%;
+    margin: -185px 0 0 -300px;
+    animation: spinOpposite 3s infinite;
+
 }
 
+  /*movement and transitions*/
+    
+  @keyframes animationFrames{
+    0% {
+      background-color: black;
+    }
+    20% {
+      background-color: rgb(248, 95, 6);
+    }
+    40% {
+        background-color: rgb(233, 108, 19);
+    }
+    60% {
+        background-color: rgb(236, 127, 48);
+    }
+    100% {
+      background-color: black;
+    }
+  }
 
-/*movement*/
+  @keyframes cf3FadeInOut {
+    55% {
+        opacity:1;
+      }
+      100% {
+        opacity: 1;
+      }
+    0% {
+      opacity:0;
+    }
+    45% {
+      opacity:0;
+    }
+  }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@keyframes shimmer {
+    100% {-webkit-mask-position:left}
+  }
 
 @keyframes mymove {
     from {background-color: f0491f;}
@@ -175,12 +312,26 @@
         transform:rotate(-360deg); 
     } 
 }
+
+@-moz-keyframes spinOpposite { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spinOpposite { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spinOpposite { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
   
 @keyframes bounce {
     from {
         transform: translate3d(0, 0, 0);
     }
     to {
-        transform: translate3d(0, 200px, 0);
+        transform: translate3d(0, 300px, 0);
     }
 }
+
