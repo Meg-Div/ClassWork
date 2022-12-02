@@ -1,0 +1,190 @@
+/* The navbar */
+
+.nav {
+    width: 100px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    font-family: "Titillium Web", cursive;
+    font-size: x-large;
+  }
+
+/*Background*/
+
+.backgroundIndex  {
+    background-image: url("https://images.unsplash.com/photo-1517495306984-f84210f9daa8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-size: 10000px;
+}
+
+.backgroundViewMaster  {
+    background-image: url("https://images.unsplash.com/photo-1615402020065-b01cca46ca41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2486&q=80");
+    background-size: 500px;
+}
+
+
+.backgroundPolaroid {
+    background-image: url("https://images.unsplash.com/photo-1605722625766-a4c989c747a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+    background-size: 1350px;
+}
+
+.backgroundGames {
+    background-image: url("https://images.unsplash.com/photo-1531525797753-909788106ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80");
+    background-size: 1000px;
+}
+
+
+/*Links*/
+
+.linkViewMaster, a.linkViewMaster:link, a.linkViewMaster:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.linkViewMaster, a.linkViewMaster:hover {
+    text-decoration: none;
+    color: #f0491f;
+}
+
+.linkPolariod, a.linkPolariod:link, a.linkPolariod:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.linkPolariod, a.linkPolariod:hover {
+    text-decoration: none;
+    height: 200px;
+    background: -webkit-linear-gradient(left,red, orange , yellow, green, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right,red,  orange, yellow, green, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right,red,  orange, yellow, green, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, red, orange , yellow, green, blue); /* Standard syntax (must be last) */
+    color:transparent;    
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.linkGames, a.linkGames:link, a.linkGames:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.linkGames, a.linkGames:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+/*About*/
+
+.IndexAbout {
+    width: 500px;
+    padding: 0px;
+    margin: 300px;
+    font-family: "Alfa Slab One";
+    text-align: center;
+    float: center;
+    color: white;
+    font-size: xx-large;
+    animation: mymove 5s infinite;
+}
+
+.viewMasterAbout {
+    width: 500px;
+    padding: 0px;
+    margin: 300px;
+    font-family: "Alfa Slab One";
+    text-align: center;
+    float: center;
+    color: #f0491f;
+    font-size: xx-large;
+    animation: mymove 5s infinite;
+}
+
+.polarAbout {
+    -webkit-animation: spinX 7s infinite;
+    animation: spinX 3s infinite;
+    width: 200px;
+    padding: 0px;
+    margin: 150px;
+    font-size: larger;
+    font-family: "Alfa Slab One";
+
+}
+
+.gamesAbout {
+    width: 100px;
+    height: 100px;
+    padding: 100px;
+    float: right;
+    font-size: xx-large;
+    border-radius: 50%;
+    text-align: center;
+    font-family: "Fascinate Inline";
+    animation: bounce 0.7s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.02, 1, 1);
+    animation-iteration-count: infinite;
+}
+
+
+.gamesImage {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    padding: 100px;
+    top: 50%;
+    left: 50%;
+    margin: -185px 0 0 -300px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+.flash-container {
+    animation: grow 5s 2s linear forwards;
+    width: 20px;
+    height: 20px;
+    z-index: 4;
+    margin: 0 auto;
+    box-shadow: 0 0 30vw 40vw rgba(10,124,10,1);
+}
+
+
+/*movement*/
+
+
+@keyframes mymove {
+    from {background-color: f0491f;}
+    to {background-color: black;}
+}
+
+@-webkit-keyframes spinX
+{  
+0%   {-webkit-transform: rotateX(0deg); -webkit-transform-origin: 0% 50% 0;}  
+100% {-webkit-transform: rotateX(360deg); -webkit-transform-origin: 0% 50% 0;}  
+}
+@keyframes spinX
+{  
+0%   {transform: rotateX(0deg); transform-origin: 0% 50% 0;}  
+100% {transform: rotateX(360deg); transform-origin: 0% 50% 0;}  
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(-360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(-360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(-360deg); 
+        transform:rotate(-360deg); 
+    } 
+}
+  
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 200px, 0);
+    }
+}

@@ -1,0 +1,29 @@
+h2 {
+    font-family: "Festive", cursive;
+    background-size: 100px;
+    padding: 30px 40px 10px 20px;
+  }
+
+  /*target with class*/
+
+  .header2 {
+    font-size: 20px;
+    /*can specify left, top, right, bottom*/
+    margin: 50px 20pm 30pm 20px;
+  }
+
+  /*target with id*/
+  #idName {
+    font-family: cursive;
+    font-size: 70px;
+    color: aqua;
+    /*takes three arguments*/
+    border: 13px solid red;
+  }
+
+  .img {
+    height: 200px;
+    width: 500px;
+    /*curve the border in 100 px or 20% */
+    border-radius: 100px;
+  }

@@ -1,0 +1,65 @@
+
+  body  {
+    background-image: url("https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80");
+    background-size: 3000px;
+}
+
+  .img {
+    border-radius: 500px;
+
+    width: 365px;
+  }
+
+  .bio {
+    width: 365px;
+    padding: 60px;
+    margin: 0px;
+    float: left;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 1000px;
+    font-size: larger;
+    font-family: 'Tangerine', cursive;
+  }
+
+  .link {
+    width: 100px;
+    padding: 10px;
+    margin: 20px;
+    float: right;
+    color: black;
+    text-align: center;
+    font-family: "Titillium Web", cursive;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 1000px;
+    font-size: larger;
+  }
+  
+  .linkin {
+    width: 100px;
+    padding: 10px;
+    margin: 20px;
+    float: right;
+    color: #0072b1;
+    text-align: center;
+    font-family: "Titillium Web", cursive;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 1000px;
+    font-size: larger;
+  }
+
+  .codewars {
+    width: 100px;
+    padding: 10px;
+    margin: 20px;
+    color: #e60b2c;
+    float: right;
+    text-align: center;
+    font-family: "Titillium Web", cursive;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 1000px;
+    font-size: larger;
+  }
