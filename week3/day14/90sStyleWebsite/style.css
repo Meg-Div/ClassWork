@@ -152,10 +152,12 @@
 }
 
 .gamesAbout {
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    height: 00px;
     padding: 250px;
     float: right;
+    font-size: larger;
+    color: orange;
     border-radius: 100%;
     animation: bounce 0.7s;
     animation-direction: alternate;
