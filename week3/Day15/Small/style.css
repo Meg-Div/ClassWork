@@ -1,0 +1,26 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+/*Create a box with no over-lapping lines*/
+.outline {
+    border: 1px solid black;
+}
+
+.outline2 {
+    border-Top: 1px solid black;
+}
+
+.outline3 {
+    border-left: 1px solid black;
+}
+
+.outline4 {
+    border-right: 1px solid black;
+}
+
+.outline5 {
+    border-bottom: 1px solid black;
+}

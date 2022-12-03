@@ -1,0 +1,76 @@
+h1 {
+    color:aqua
+}
+
+    /* 
+    display: grid;
+    Single column, different row
+    Text is left aigned 
+
+    Display: flex;
+    Multi column, single row 
+
+    layout will only effect the direct children
+    grab the closet container*/
+
+    /*grid-template-columns: repeat(2, 150px);
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    grid-template-areas:
+    "header header"
+    "body main"
+    "footer main"
+    ^can't be used with columns and rows
+
+
+    centers item in grid - 
+    place-items: center;
+  
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid red;
+    gap: 20px;
+    grid-template-rows: auto;
+    padding: 20px;
+*
+.container {
+    display: grid;
+    border: 2px solid purple;
+    gap: 20px;
+    padding: 2px;
+}
+
+
+.header {
+    grid-area: header;
+    border: 10px solid red
+}
+
+.body {
+    grid-area: body;
+    border: 1px solid cornflowerblue
+}
+
+*/
+
+
+.main {
+    display: grid;
+    grid-template-areas:
+    "center";
+    border: 2px solid red;
+    gap: 20px 10px;
+    padding: 20px;
+}
+
+.center {
+    height: 90px;
+    width: 305px;
+    display: grid;
+    border: 2px solid black;
+    place-items: center;
+}
+
+.topmost {
+    display: grid;
+    place-items: center;
+}
