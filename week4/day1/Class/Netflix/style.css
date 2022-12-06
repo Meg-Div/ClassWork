@@ -20,7 +20,6 @@
     
  }
 
-
  logoImg {
   border-radius: 4px;
   width: 50px;
@@ -45,7 +44,7 @@
 
 redButton {
     background-color: #e50914;
-    border: 1px solid rgb(56, 54, 54);
+    border: 1px solid rgb(84, 83, 83);
     font-size: 13px;
     padding: 9px 12px;
     align-items: center;
@@ -101,7 +100,7 @@ popular {
     background-color: #181818;
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
     font-size: 16px;
-    padding: 12px 30px
+    padding: 2px 30px;
 
 }
 
@@ -109,10 +108,11 @@ popular {
 .postersImg {
     height: 150px;
     width: 250px;
+    margin-right: 1.5em;
     background-color: #181818;
     box-sizing: border-box;
     align-items: center;
-    margin-right: 1.3em;
+    justify-content: center;
   }
   
 
@@ -127,5 +127,3 @@ popular {
     background-color: #181818;
 
 }
-
-
