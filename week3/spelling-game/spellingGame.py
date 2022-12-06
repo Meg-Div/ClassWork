@@ -5,6 +5,7 @@ import random
 #the first round has a three-card hand,the dealer deals out three cards to each player.
 # the second round has a four-card hand,
 # and so on until the game ends with a ten-card hand.
+
 class Quiddler:
     def __init__(self):
         self.POINTSCON = [8,8,5,6,6,7,2,13,8,3,5,5,6,15,5,3,3,11,10,12,4,14]

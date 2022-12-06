@@ -1,0 +1,46 @@
+
+.content {
+    display: flex;
+    /*to  perfectly center need both below items*/
+    /*horizontal*/
+    justify-content: center;
+    /*vertically*/
+    align-items: right;
+    /*wraps the text to a new row*/
+    flex-wrap: wrap;
+    /*wrap-reverse reverses the wrap*/
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    background-color: cornflowerblue;
+    align-items: top;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+ }
+
+ add {
+    flex: 30%;
+    background-color: #CBC3E3
+ }
+
+ middle {
+    flex: 40%;
+    background-color: pink;
+ }
+
+@media (width <= 1000px) {
+    #container {
+        flex-direction: column;
+     }
+}
+
+.center {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}

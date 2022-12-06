@@ -1,0 +1,33 @@
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    display: flex;
+    background-color: red;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.blue {
+    display: flex;
+    background-color: blue;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.yellow {
+    display: flex;
+    background-color: yellow;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}

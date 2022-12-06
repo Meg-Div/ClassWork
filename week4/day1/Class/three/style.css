@@ -1,0 +1,28 @@
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .peach-square {
+    background-color: #ffce9e;
+    height: 100px;
+  }
+
+  .brown-square {
+    background-color: #d18a46;
+    height: 100px;
+  }
