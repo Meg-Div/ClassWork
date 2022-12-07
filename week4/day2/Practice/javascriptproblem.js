@@ -13,4 +13,5 @@ let answer = sum(70, 10);
 
 console.log(answer);
 
-const sum = (one, two) => (one + two >= 50 && one + two <= 80 ? 65 : 80);
+//one liner
+const total = (one, two) => (one + two >= 50 && one + two <= 80 ? 65 : 80);
