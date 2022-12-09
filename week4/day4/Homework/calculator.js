@@ -100,7 +100,7 @@ const equal = function () {
     }
   }
 
-  console.log(total + " \uD83C\uDF89");
+  h1.innerText = total + " \uD83C\uDF89";
   nums = [];
 };
 
