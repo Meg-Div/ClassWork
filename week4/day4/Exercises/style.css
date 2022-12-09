@@ -1,0 +1,21 @@
+.megImg {
+    border-radius:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.megHeader {
+    color:aqua;
+    background-color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.megsP {
+    color: blueviolet;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tImg {
+    padding: 15px
+}
