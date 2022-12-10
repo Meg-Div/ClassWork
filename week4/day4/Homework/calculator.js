@@ -23,13 +23,13 @@ let nums = [];
 //create container
 const megsContainer = document.getElementsByClassName("mainContainer")[0];
 
-//if evt is 0-9
+//if button is 0-9
 function number(evt) {
   console.log(evt.target.value);
   nums.push(Number(evt.target.value));
 }
 
-//if evt is an operator
+//if button is an operator
 function operator(evt) {
   console.log(evt.target.value);
   nums.push(evt.target.value);
@@ -48,7 +48,7 @@ const equal = function () {
 
   //if user input operator first
   if (operators.includes(Object.values(nums)[0])) {
-    console.log("Please enter a number first.");
+    window.alert("Please enter a number first.");
   }
 
   //if user inputs in double digits
@@ -81,8 +81,6 @@ const equal = function () {
   else if (Object.values(nums)[1] == "+") {
     total =
       parseFloat(Object.values(nums)[0]) + parseFloat(Object.values(nums)[2]);
-  } else {
-    console.log("Please enter in a correct equation.");
   }
 
   //if more than one calculation is being performed
