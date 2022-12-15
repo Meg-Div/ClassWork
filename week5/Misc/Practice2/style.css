@@ -1,0 +1,12 @@
+.table {
+    display: flex;
+    background-color: greenyellow;
+    width: 500px;
+}
+
+.nextStep {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+}
