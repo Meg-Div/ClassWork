@@ -135,15 +135,6 @@ const count = () => {
 
   document.querySelector(".player-name").innerText = `Player: ${pTotal}`;
 
-  console.log(
-    "Dealer Total: ",
-    dealerTotal.reduce((prev, curr) => prev + curr, 0)
-  );
-  console.log(
-    "Player Total: ",
-    playerTotal.reduce((prev, curr) => prev + curr, 0)
-  );
-
   //21
   if (pTotal === 21 || dTotal === 21) {
     //both at 21
@@ -181,14 +172,7 @@ const count = () => {
       let idx = dealerTotal.indexOf(11);
       dealerTotal[idx] = 1;
     }
-    console.log(
-      "Ace Dealer Total: ",
-      dealerTotal.reduce((prev, curr) => prev + curr, 0)
-    );
-    console.log(
-      "Ace Player Total: ",
-      playerTotal.reduce((prev, curr) => prev + curr, 0)
-    );
+    count();
   }
 
   //bust
@@ -210,6 +194,7 @@ const count = () => {
     gameOver = true;
   }
 
+  //stand and dealter at over 17
   if (
     document.querySelector("#hit").disabled === true &&
     document.querySelector("#stand").disabled === true &&
@@ -223,9 +208,7 @@ const count = () => {
       document.querySelector(
         ".player-name"
       ).innerText = `Player: ${pTotal} ----> You win!`;
-    }
-    //dealer at 21
-    else if (pTotal < dTotal) {
+    } else if (pTotal < dTotal) {
       document.querySelector(
         ".player-name"
       ).innerText = `Player: ${pTotal} ----> You lost!`;
@@ -240,6 +223,3 @@ const count = () => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {});
-
-//add in total to table
-// flash you win!
