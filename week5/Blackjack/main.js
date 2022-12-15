@@ -213,7 +213,7 @@ const count = () => {
         ".player-name"
       ).innerText = `Player: ${pTotal} ----> You lost!`;
     }
-    gameOver === true;
+    gameOver = true;
   }
 
   if (gameOver) {
