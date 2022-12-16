@@ -52,9 +52,9 @@ const playerCard = () => {
   deck.shift();
 };
 
+//creates first face up card
 const firstDealerCard = () => {
   shuffleArray();
-  //create new card, link image, append to player
   let dealerCard = document.createElement("img");
   dealerCard.src = `./images/${`${deck[0]["rank"]}_of_${deck[0]["suit"]}`}.png`;
   dealerHand.append(dealerCard);
@@ -68,16 +68,14 @@ const firstDealerCard = () => {
   deck.shift();
 };
 
+//creates second, third, fourth, etc face down cards
 const secondDealerCard = () => {
   shuffleArray();
-  //create new card, link image, append to player
   let dealerCard = document.createElement("img");
   dealerCard.src = `./images/${`${deck[0]["rank"]}_of_${deck[0]["suit"]}`}.png`;
   dealerHand.append(dealerCard);
   dealerCard.classList = "dealer-back";
 
-  amount = deck[0]["pointValue"];
-
   if (court.includes(deck[0]["pointValue"])) {
     if (deck[0]["pointValue"] == "ace") {
       dealerTotal.push(11);
@@ -87,6 +85,7 @@ const secondDealerCard = () => {
   deck.shift();
 };
 
+//flips the cards over at end
 const turn = () => {
   for (const card of dealerHand.childNodes) {
     if (card.localName === "img") {
@@ -95,6 +94,7 @@ const turn = () => {
   }
 };
 
+//deal button
 const onDeal = () => {
   playerCard();
   firstDealerCard();
@@ -105,6 +105,7 @@ const onDeal = () => {
   count();
 };
 
+//hit button
 const onHit = () => {
   if (dealerTotal.reduce((prev, curr) => prev + curr, 0) > 16) {
     playerCard();
@@ -116,6 +117,7 @@ const onHit = () => {
   count();
 };
 
+//stand button
 const onStand = () => {
   document.querySelector("#hit").disabled = true;
   document.querySelector("#stand").disabled = true;
@@ -129,6 +131,7 @@ const onStand = () => {
   count();
 };
 
+//counts current hand
 const count = () => {
   dTotal = dealerTotal.reduce((prev, curr) => prev + curr, 0);
   pTotal = playerTotal.reduce((prev, curr) => prev + curr, 0);

@@ -3,7 +3,7 @@ const searchButton = document.querySelector(".search");
 const getWeather = async () => {
   const weatherInput = document.querySelector(".weather").value;
 
-  const weatherData = await fetch();
+  const weatherData = await fetch(``);
   const json = await weatherData.json();
 
   const wrapper = document.createElement("div");
