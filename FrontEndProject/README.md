@@ -26,6 +26,5 @@ Project APIs:
 - https://api.agify.io
 
 Links:
-- [GitHub]()
-- [Dev.to blog]()
-- [Replit]()
+- [GitHub](https://github.com/Meg-Div/ClassWork/tree/main/FrontEndProject)
+- [Dev.to blog](https://dev.to/megdiv/its-a-circus-3jm8)
