@@ -1,0 +1,46 @@
+.moviePoster {
+    border: 6px solid black;
+    object-fit: cover;
+    width: 200px;
+    height: 300px;
+    box-shadow: 5px 5px #8a7865;
+  }
+  
+  .movieCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    /* border: 3px solid cornflowerblue; */
+  }
+  
+  .movieCardContainer {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .searchContainer {
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+  }
+  
+  .searchInput {
+    grid-column: 3/3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+
+  .title {
+    font-family: fantasy;
+  }
+
+  p {
+    font-family: Monaco;
+  }
