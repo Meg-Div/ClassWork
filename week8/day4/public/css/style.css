@@ -1,0 +1,138 @@
+#one {
+    display: flex;
+    flex-direction: row;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: blueviolet;
+    font-size: large;
+    text-align: center;
+    background-color: rgb(193, 187, 187);
+}
+
+#name {
+    flex-grow: 1;
+    position: right;
+    width: 200px;
+}
+
+#occupation {
+    flex-grow: 1;
+    position: left;
+    width: 200px;
+}
+
+
+#image {
+    flex-grow: 1;
+    position: right;
+    width: 540px;
+}
+
+#about {
+    flex-grow: 1;
+    position: left;
+    width: 200px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#easywire {
+    flex-grow: 1;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+#item {
+    flex-grow: 1;
+    font-size: 13px;
+    padding: 10px;
+}
+
+#nav {
+    flex-grow: 1;
+    width: 200px;
+    background-color: teal;
+    color: white;
+    position: left;
+    padding: 30px;
+}
+
+
+#search {
+    flex-grow: 1;
+    width: 100%;
+    background-color:  rgb(239, 238, 238);
+    padding: 20px;
+}
+
+#overview {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    background-color:  rgb(201, 201, 211);
+    height: auto;
+}
+
+#activityAndCompany {
+    flex-grow: 1;
+    width: 800px;
+    background-color:  rgb(201, 201, 211);
+    padding: 25px;
+}
+
+#balanceItem {
+    flex-grow: 1;
+    background-color:  rgb(222, 217, 217);
+    padding: 20px;
+    box-shadow: 3px 3px rgb(119, 120, 119);
+}
+
+#balanceBox {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+#person {
+    display: flex;
+    flex-direction: row;
+    background-color:  rgb(239, 238, 238);
+    padding: 10px;
+}
+
+#personHeader {
+    display: flex;
+    flex-direction: row;
+    background-color:  rgb(216, 212, 212);
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+#activityTitle {
+    background-color:  rgb(239, 238, 238);
+    padding: 10px;
+    font-weight: bold;
+}
+
+#overviewTitle {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    height: 10px;
+    background-color:  rgb(201, 201, 211);
+    padding: 30px;
+    font-weight: bold;
+}
+
+
+#search {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    height: 10px;
+    background-color:  rgb(239, 238, 238);
+    padding: 30px;
+    border: none
+}

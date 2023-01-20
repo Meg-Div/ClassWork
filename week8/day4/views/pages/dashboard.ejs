@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+  
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+  
+<body class="container">
+
+
+<main>
+  <div id="container">
+
+    <div id="nav">
+      <div id="easywire">easywire</div>
+      <div>
+        <div id="item">Home</div>
+        <div id="item">Team</div>
+        <div id="item">Tasks</div>
+        <div id="item">Leaves</div>
+        <div id="item">Projects</div>
+        <div id="item">Timesheet</div>
+        <div id="item">Contacts</div>
+        <div id="item">Account</div>
+      </div>
+      
+    </div>
+
+    <div id="main">
+
+
+    <input id="search" type="text" placeholder="Search">
+    
+
+      <div id="overviewTitle">Overview:</div>
+
+      <div id="overview"> 
+  
+      <div id="balanceBox">
+        <div id="balanceItem">
+          Account balance 
+          <br> 
+          <%= accountBalance.amount %>
+        </div>
+      </div>
+
+      <div id="balanceBox">
+
+            <div id="balanceItem">
+              Pending
+              <br> 
+              <%= pending.amount %>
+            </div>
+          </div>
+
+            <div id="balanceBox">
+            <div id="balanceItem">
+              Processed
+              <br> 
+              <%= processedData.amount %>
+            </div>
+          </div>
+
+      </div>
+
+
+      <div id="activityAndCompany">
+
+        <div id="activityTitle">Recent Activity:</div>
+
+        <div id="personHeader">
+          <div id="item"> Name </div>
+          <div id="item"> Balance </div>
+          <div id="item"> Company </div>
+          <div id="item"> Email </div>
+        </div>
+
+
+
+        <div id="recentActivity">
+          <% data.forEach( (item )=> { %> 
+            <div id="person">
+              <div id="item"> <%=item.name%> </div>
+              <div id="item"> <%=item.balance%> </div>
+              <div id="item"> <%=item.company%> </div>
+              <div id="item"> <%=item.email%> </div>
+            </div>
+         
+            <% }); %>
+        </div>
+
+        <div id="company">
+          <div id="leave"></div>
+          <div id="staff"></div>
+          <div id="profileUpdate"></div>
+          <div id="birthday"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+</main>
+
+</body>
+</html>

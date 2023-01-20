@@ -5,7 +5,7 @@ const searchMovies = async () => {
     .querySelector(".searchField")
     .value.replace(/\s/g, "+");
   console.log(inputField);
-  const movieURL = `http://www.omdbapi.com/?apikey=443d1f24&s=${inputField}`;
+  const movieURL = `...${inputField}`;
 
   const rawData = await fetch(movieURL);
   const json = await rawData.json();
@@ -24,7 +24,7 @@ const searchMovies = async () => {
     // p
     const movieYear = document.createElement("p");
     const imdbID = movie.imdbID;
-    const individualMovieData = `http://www.omdbapi.com/?apikey=443d1f24&i=${imdbID}`;
+    const individualMovieData = `...${imdbID}`;
     const fetchIndividualMovie = await fetch(individualMovieData);
     const individualJson = await fetchIndividualMovie.json();
     console.log(imdbID);
