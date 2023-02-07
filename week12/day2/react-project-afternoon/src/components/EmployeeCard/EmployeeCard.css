@@ -1,0 +1,45 @@
+
+.Employee {
+    display: flex;
+    background-color: rgb(182, 221, 232);
+    margin: 10px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 10px 5px 5px rgb(174, 164, 164);
+}
+
+
+
+.Info {
+    text-align: center;
+}
+
+.NamePic {
+    font-family: system-ui;
+}
+
+
+#button {
+    background-color: #8ac1eb; 
+}
+
+#button:hover {
+    background-color: #1ee252; 
+  }
+
+#img {
+    box-shadow: 2px 2px 2px rgb(68, 122, 151);
+    background:
+    radial-gradient(
+      circle closest-side,
+      #ECD078 calc(99% - var(--b)),
+      #C02942 calc(100% - var(--b)) 99%,
+      #0000
+    );
+  }
+
+  #img:hover {
+    transform: scale(1.35);
+  }
