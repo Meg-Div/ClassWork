@@ -1,7 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-export const Homepage = () => {
+export const Homepage = ({user}) => {
+  const book = {name: "Art of War"};
+
   return (
-    <div>Homepage</div>
+    <div>
+    <Link to="/account" state={book}> 
+    Got to Account with book info
+    </Link>
+    </div>
   )
 }
