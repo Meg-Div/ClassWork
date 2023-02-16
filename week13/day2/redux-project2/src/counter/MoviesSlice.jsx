@@ -2,19 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [];
 
-export const counterSlice = createSlice({
+export const movieSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    addMovie: (state, action) => {
-        const addNewMovie = state
-        addedNewMovie.push(action.payload)
-        state = addedNewMovie;
+    searchMovie: (state, action) => {
+      return action.payload;
     },
   },
 });
+export const { searchMovie } = movieSlice.actions;
 
-// Action creators are generated for each case reducer function
-export const { addMovie} = moviesSlice.actions;
-
-export default moviesSlice.reducer;
+export default movieSlice.reducer;

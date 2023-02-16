@@ -1,29 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import { Counter } from './counter/Counter'
-import { useSelector } from 'react-redux'
-import { addMovie } from './counter/moviesSlice'
+import {Route, Routes} from "react-router-dom"
+import { CardPage } from './counter/CardPage'
+import { NavBar } from "./counter/NavBar"
+import {Page} from './counter/Page'
 
 
 function App() {
-  const dispatch = useDispatch();
-  const [movieToAdd, setMovieToAdd] = useState("")
-  const movies = useSelector(state => state.movies);
   return (
-    <div className="App">
-      <Counter />
-
-      <h2>Movies</h2>
-      {movies.length !== 0 ? movies.map((movie) => (
-      <p> {movie?.name}</p>)
-      ) : (
-        <p> No movies yet</p>
-      )}
-      <input type="text" onChange={(e) => setMovieToAdd(e.target.value)}/>
-
-      <button onClick={() => dispatch(addMovie(movieToAdd))}>Add Movie</button>
-    </div>
+    <div className="">
+    <NavBar />
+    <Routes>
+      <Route path="/" element={<CardPage/>} />
+      <Route path="/page" element={<Page/>} />
+    </Routes>
+  </div>
   )
 }
 
